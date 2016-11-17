@@ -32,6 +32,7 @@ export const Character = {
 
     isIdentifierStart(cp: number): boolean {
         return (cp === 0x24) || (cp === 0x5F) ||  // $ (dollar) and _ (underscore)
+            (cp === 0x40) || (cp === 0x23) ||     // @ (at) and # (octothorpe)
             (cp >= 0x41 && cp <= 0x5A) ||         // A..Z
             (cp >= 0x61 && cp <= 0x7A) ||         // a..z
             (cp === 0x5C) ||                      // \ (backslash)
@@ -40,6 +41,7 @@ export const Character = {
 
     isIdentifierPart(cp: number): boolean {
         return (cp === 0x24) || (cp === 0x5F) ||  // $ (dollar) and _ (underscore)
+            (cp === 0x40) || (cp === 0x23) ||     // @ (at) and # (octothorpe)
             (cp >= 0x41 && cp <= 0x5A) ||         // A..Z
             (cp >= 0x61 && cp <= 0x7A) ||         // a..z
             (cp >= 0x30 && cp <= 0x39) ||         // 0..9
